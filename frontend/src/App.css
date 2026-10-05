@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0d0c;
+  color: #f4f1e8;
+  font-family: "DM Sans", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(95, 111, 85, 0.14), transparent 32%),
+    #0b0d0c;
+}
+
+nav {
+  height: 78px;
+  padding: 0 7%;
+  border-bottom: 1px solid #272a26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+}
+
+.logoIcon {
+  color: #a7b99a;
+  margin-right: 10px;
+}
+
+.status {
+  color: #92978f;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status span {
+  width: 7px;
+  height: 7px;
+  background: #9caf88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #9caf88;
+}
+
+main {
+  width: min(1100px, 88%);
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 95px 0 55px;
+}
+
+.eyebrow {
+  color: #98a38f;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(45px, 6vw, 76px);
+  line-height: 1;
+  margin: 17px 0;
+  font-weight: 600;
+}
+
+.hero h1 span {
+  color: #a8b99b;
+  font-style: italic;
+}
+
+.subtitle {
+  color: #898d87;
+  max-width: 510px;
+  margin: 25px auto 0;
+  line-height: 1.7;
+}
+
+.uploadCard {
+  border: 1px solid #30342e;
+  background: rgba(24, 27, 24, 0.8);
+  border-radius: 4px;
+  padding: 25px 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.uploadIcon {
+  width: 47px;
+  height: 47px;
+  border: 1px solid #41483d;
+  display: grid;
+  place-items: center;
+  color: #a8b99b;
+  font-size: 22px;
+}
+
+.uploadCard h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.uploadCard p {
+  margin: 0;
+  color: #777c75;
+  font-size: 12px;
+}
+
+.chooseButton {
+  margin-left: auto;
+  border: 1px solid #50574c;
+  padding: 11px 17px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chooseButton:hover {
+  background: #a8b99b;
+  color: #0b0d0c;
+}
+
+.chooseButton input {
+  display: none;
+}
+
+.selectedFile {
+  width: 100%;
+  border-top: 1px solid #30342e;
+  padding-top: 18px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectedFile button {
+  border: 0;
+  background: #a8b99b;
+  color: #10120f;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.uploadCard:has(.selectedFile) {
+  flex-wrap: wrap;
+}
+
+.vault {
+  margin-top: 90px;
+  min-height: 400px;
+}
+
+.vaultHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #292c28;
+}
+
+.vaultHeader h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 31px;
+  margin: 8px 0 0;
+}
+
+.search {
+  width: 280px;
+  border-bottom: 1px solid #4b5049;
+  padding: 9px 3px;
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #eae8e0;
+}
+
+.search input::placeholder {
+  color: #666b65;
+}
+
+.empty {
+  text-align: center;
+  padding: 90px 0;
+  color: #737871;
+}
+
+.empty div {
+  font-size: 40px;
+  color: #8d9d82;
+}
+
+.empty h3 {
+  color: #d9d7ce;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.gallery {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.imageCard {
+  background: #151815;
+  border: 1px solid #292d28;
+  overflow: hidden;
+}
+
+.imageCard img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.imageCard:hover img {
+  transform: scale(1.025);
+}
+
+.imageInfo {
+  padding: 14px;
+}
+
+.imageInfo span {
+  color: #84917c;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.imageInfo p {
+  margin: 5px 0 0;
+  color: #b9bcb5;
+  font-size: 12px;
+}
+
+footer {
+  width: min(1100px, 88%);
+  margin: 90px auto 0;
+  border-top: 1px solid #292c28;
+  padding: 30px 0 45px;
+  display: flex;
+  justify-content: space-between;
+  color: #626760;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+  .uploadCard {
+    align-items: flex-start;
+  }
+
+  .chooseButton {
+    margin-left: 0;
+  }
+
+  .vaultHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
