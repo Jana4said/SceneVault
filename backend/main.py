@@ -55,7 +55,7 @@ async def upload_image(file: UploadFile = File(...)):
         "message": "Image uploaded successfully",
         "original_name": file.filename,
         "object_key": object_name,
-        "image_url": f"http://127.0.0.1:8000/images/{object_name}"
+        "image_url": f"http://localhost:8001/images/{object_name}"
     }
 
 
@@ -67,7 +67,7 @@ def list_images():
     return [
         {
             "filename": filename,
-            "url": f"http://127.0.0.1:8000/images/{filename}"
+            "url": f"http://localhost:8001/images/{filename}"
         }
         for filename in files
     ]
